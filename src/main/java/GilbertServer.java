@@ -16,8 +16,13 @@ public class GilbertServer {
 
         before((req, response) -> checkAuth(req));
         get("/hello", (req, res) -> "Hello World!");
-        
+        get("messages-since", (req, res) -> "Ahhhhh");
+
     }
+
+    // Roadmap - need message submit endpoint, and message get endpoint
+    // For this, we first need database connectivity
+    // Workflow: Check auth, then store/yield messages
 
 
 }
